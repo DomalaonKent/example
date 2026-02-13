@@ -1,0 +1,18 @@
+<div style="padding:20px;font-family:Arial">
+  <h2>Product Lists</h2>
+
+  <p>Total Products: {{ getTotalProducts() }}</p>
+
+  <ul>
+    <li *ngFor="let product of getProducts()">
+      {{ product }}
+    </li>
+  </ul>
+
+  <div style="margin-top:20px">
+    <input #productInput type="text" placeholder="Enter product name">
+    <button (click)="addNewProduct(productInput.value); productInput.value=''">
+      Add Product
+    </button>
+  </div>
+</div>
